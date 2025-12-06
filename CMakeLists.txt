@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(hello)
+project(conway)
 
 # set the output directory for built objects.
 # This makes sure that the dynamic library goes into the build directory automatically.
@@ -12,7 +12,7 @@ find_package(OpenMP)
 add_subdirectory(vendored/SDL EXCLUDE_FROM_ALL)
 
 # Create your game executable target as usual
-add_executable(hello hello.c)
+add_executable(conway hello.c)
 
 # Link to the actual SDL3 library.
-target_link_libraries(hello PRIVATE SDL3::SDL3 OpenMP::OpenMP_C)
+target_link_libraries(conway PRIVATE SDL3::SDL3 OpenMP::OpenMP_C)
